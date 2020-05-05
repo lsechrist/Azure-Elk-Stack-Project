@@ -5,7 +5,7 @@ The files in this repository were used to configure the network depicted below.
 [Network Diagram](Images/Azure-Diagram.png)
 
 This document contains the following details:
-- Links to th Configuration and Playbook files used
+- Links to the Configuration and Playbook files used
 - Description of the Topology
 - Access Policies
 - ELK Configuration
