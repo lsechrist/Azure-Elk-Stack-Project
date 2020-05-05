@@ -1,0 +1,28 @@
+---
+  - name: Install and configure nginx containers
+    hosts: nginxservers
+    become: true
+    tasks:
+      - name: Install Docker
+        apt:
+          name: docker.io
+          state: present
+
+      - name: Install pip
+        apt: 
+          name: python-pip
+          state: present
+
+      - name: Install docker py module
+        pip:
+          name: docker
+          state: present
+
+ 
+      - name: Install the docker nginx container
+        docker_container:
+          name: nginx 
+          image: nginx
+          state: started
+          ports: 
+           - "80:80"
