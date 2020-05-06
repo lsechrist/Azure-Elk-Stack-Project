@@ -200,14 +200,14 @@ Now that we have the proper containers deployed and running in our VM's we can m
 The installation process is very similar for the DVWA, Jump-Box and NGINX vm's so I will only cover one, simply choose the desired playbook to install the filebeat service on different VM types, there are different playbooks for the different hosts designated in the [hosts](ansible/hosts) file. All three use the same [Filebeat-Configuration](ansible/files/filebeat-configuration.yml) file that needs to be modified.  On lines 1105 and 1805 the IP addresses need to be changed to your ELK servers IP, leave the port the same. Once that is correct you can run the playbook with the command
 `ansible-playbook /etc/ansible/roles/filebeat-playbook-dvwa.yml` 
 
-For installation on the ELK VM the IP addresses at lines 1105 and 1805 should say `localhost` instead, this will point the log monitor at itself instead of a different VM. Since the [Filebeat Configuration](ansible/files/filebeat-configuration-elk.yml) file is different and we are pointing at a different host we will run the [ELK Playbook](/etc/ansible/roles/filebeat-playbook-elk.yml) with the same `ansible-playbook` command like this
+For installation on the ELK VM the IP addresses at lines 1105 and 1805 should say `localhost` instead, this will point the log monitor at itself instead of a different VM. Since the [Filebeat Configuration](ansible/files/filebeat-configuration-elk.yml) file is different and we are pointing at a different host we will run the [ELK Playbook](ansible/roles/filebeat-playbook-elk.yml) with the same `ansible-playbook` command like this
 `ansible-playbook /etc/ansible/roles/filebeat-configuration-elk.yml`
 
 - Metricbeat Installation
 This is the exact same process as the Filebeat installation. The [Metricbeat Configuration](ansible/files/metricbeat-configuration.yml) is the same for all three Host VM types (DVWA, Jump-box and NGINX) and must be modified on line 62 and 96 to point to the ELK VM IP addresss, leave the port the same. Then run the playbook
 `ansible-playbook /etc/ansible/roles/metricbeat-playbook-dvwa.yml`
 
-For the ELK VM change lines 62 and 96 to `localhost` in the [Metricbeat Configuration](ansible/files/metricbeat-elk.yml) file instead of an IP address, this has the same reasoning as the changes made to the Filebeat Configuration file. Run the playbook
+For the ELK VM change lines 62 and 96 to `localhost` in the [Metricbeat Configuration](ansible/files/metricbeat-configuration-elk.yml) file instead of an IP address, this has the same reasoning as the changes made to the Filebeat Configuration file. Run the playbook
 `ansible-playbook /etc/ansible/roles/metricbeat-playbook-elk.yml`
 
-You should now have a working ELK stack and be able to customize a Kibana dashboard to your liking. [Here's mine](Images/Kibana-Dashboard)
+You should now have a working ELK stack and be able to customize a Kibana dashboard to your liking. [Here's mine](Images/Kibana-Dashboard.png)
