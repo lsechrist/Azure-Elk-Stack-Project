@@ -5,8 +5,9 @@
     tasks: 
   
     - name: Download filebeat deb package
-      shell:
-        cmd: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+      get_url:
+        url: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+        dest: /tmp
 
     - name: Install filebeat pkg
       shell:
@@ -26,5 +27,7 @@
         cmd: filebeat setup 
 
     - name: start filebeat
-      shell:
-        cmd: service filebeat start
+      service:
+        name: filebeat
+        enabled: yes
+        state: started
