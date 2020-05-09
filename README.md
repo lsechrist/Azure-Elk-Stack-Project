@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-[Network Diagram](Images/Azure-Diagram.png)
+![Network Diagram](Images/Azure-Diagram.png?raw=true)
 
 This document contains the following details:
 - Links to the Configuration and Playbook files used
