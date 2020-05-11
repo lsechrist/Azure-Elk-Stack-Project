@@ -210,4 +210,4 @@ This is the exact same process as the Filebeat installation. The [Metricbeat Con
 For the ELK VM change lines 62 and 96 to `localhost` in the [Metricbeat Configuration](ansible/files/metricbeat-configuration-elk.yml) file instead of an IP address, this has the same reasoning as the changes made to the Filebeat Configuration file. Run the playbook
 `ansible-playbook /etc/ansible/roles/metricbeat-playbook-elk.yml`
 
-You should now have a working ELK stack and be able to customize a Kibana dashboard to your liking. [Here's mine](Images/Kibana-Dashboard.png)
+You should now have a working ELK stack and be able to customize a Kibana dashboard to your liking. ![Here's mine](Images/Kibana-Dashboard.png)
