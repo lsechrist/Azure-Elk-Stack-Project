@@ -77,9 +77,11 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 The Jump-Box-Provisioner machine can accept SSH connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- "My Home Network Public IP" ## This IP Address is the only address the Jump Box will accept SSH connections from. 
+- "My Home Network Public IP" ## This IP Address is the only address the Jump Box will accept SSH connections from.
+
 The Elk Server Machine has only one internet facing port open (ELK-WebServ-Port). Access to this machine is only allowed from the following IP addressess:
 - "My Home Network Public IP" ## This IP Address is the only address the Elk server will accept connections from.
+
 - Machines within the network can only be accessed by the Jump-Box-Provisioner except the ELK-W2-VM that has the same access restrictions as the Jump-Box-Provisioner. 
 - The Load balancer forwards external traffic from the internet to port 80 on the DVWA and WebServ machines.  
 - Every machine in the network reports back to the Elk server through the internal network.  This communication is possible accross regions by peering the virtual networks together, each regional Vnet peers with the other two regions Vnets. [Azure Vnet Peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview)
@@ -117,7 +119,7 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because you can deploy multiple ELK machines for monitoring different blocks of VMs, one Elk server for webservers, one for Databases, one for another block of webservers hosting a different website, etc.
 
 
-The playbook implements the following tasks:[Install Elk](ansible/files/install-elk.yml)
+The [Install Elk playbook](ansible/files/install-elk.yml) implements the following tasks:
 - Installs Docker
 - Installs pip
 - Installs the docker module for python
