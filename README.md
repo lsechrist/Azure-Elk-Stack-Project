@@ -16,33 +16,33 @@ This document contains the following details:
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select playbook files may be used to install only certain pieces of it, such as Filebeat or Metricbeat.
 
 ### Ansible Configuration Files
-[Ansible Configuration File](ansible/ansible.cfg)
-[Ansible Hosts File](ansible/hosts)
+-[Ansible Configuration File](ansible/ansible.cfg)
+-[Ansible Hosts File](ansible/hosts)
 
 ### VM Image Playbooks
-[Install DVWA](ansible/files/install-dvwa.yml)
-[Install Elk](ansible/files/install-elk.yml)
-[Install nginx](ansible/files/install-nginx.yml)
+-[Install DVWA](ansible/files/install-dvwa.yml)
+-[Install Elk](ansible/files/install-elk.yml)
+-[Install nginx](ansible/files/install-nginx.yml)
 
 ### Filebeat Configuration Files
-[Standard Filebeat Configuration](ansible/files/filebeat-configuration.yml)
-[Elk Server Filebeat Configuration](ansible/files/filebeat-configuration-elk.yml)
+-[Standard Filebeat Configuration](ansible/files/filebeat-configuration.yml)
+-[Elk Server Filebeat Configuration](ansible/files/filebeat-configuration-elk.yml)
 
 ### Metricbeat Configuration Files
-[Standard Metricbeat Configuration](ansible/files/metricbeat-configuration.yml)
-[Elk Server Metricbeat Configuration](ansible/files/metricbeat-configuration-elk.yml)
+-[Standard Metricbeat Configuration](ansible/files/metricbeat-configuration.yml)
+-[Elk Server Metricbeat Configuration](ansible/files/metricbeat-configuration-elk.yml)
 
 ### Filebeat Installation Playbooks
-[DVWA Playbook](ansible/roles/filebeat-playbook-dvwa.yml)
-[Elk Playbook](ansible/roles/filebeat-playbook-elk.yml)
-[Jump Box Playbook](ansible/roles/filebeat-playbook-jb.yml)
-[nginx Playbook](ansible/roles/filebeat-playbook-nginx.yml)
+-[DVWA Playbook](ansible/roles/filebeat-playbook-dvwa.yml)
+-[Elk Playbook](ansible/roles/filebeat-playbook-elk.yml)
+-[Jump Box Playbook](ansible/roles/filebeat-playbook-jb.yml)
+-[nginx Playbook](ansible/roles/filebeat-playbook-nginx.yml)
 
 ### Metricbeat Installation Playbooks
-[DVWA Playbook](ansible/roles/metricbeat-playbook-dvwa.yml)
-[Elk Playbook](ansible/roles/metricbeat-playbook-elk.yml)
-[Jump Box Playbook](ansible/roles/metricbeat-playbook-jb.yml)
-[nginx Playbook](ansible/roles/metricbeat-playbook-nginx.yml)
+-[DVWA Playbook](ansible/roles/metricbeat-playbook-dvwa.yml)
+-[Elk Playbook](ansible/roles/metricbeat-playbook-elk.yml)
+-[Jump Box Playbook](ansible/roles/metricbeat-playbook-jb.yml)
+-[nginx Playbook](ansible/roles/metricbeat-playbook-nginx.yml)
 
 
 
